@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/parent"
+    app:cardCornerRadius="7dp"
+    app:cardElevation="7dp"
+    android:layout_margin="5dp">
+
+    <RelativeLayout
+        android:layout_width="350dp"
+        android:layout_height="wrap_content" >
+
+        <!-- collapse -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:id="@+id/collapsed_relative_layout">
+
+            <TextView
+                android:textColor="@color/black"
+                style="@style/CarFont"
+                android:text="Car Name"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="20dp"
+                android:id="@+id/text_view_car_name" />
+
+            <LinearLayout
+                android:layout_centerHorizontal="true"
+                android:id="@+id/linear_layout_booking_info_top"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/text_view_car_name">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:text="Client name:"
+                        android:textStyle="bold"
+                        style="@style/MainFont"
+                        android:id="@+id/text_view_car_client_name_title"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp">
+
+                    <TextView
+                        style="@style/MainFont"
+                        android:text="Client name"
+                        android:textStyle="bold"
+                        android:id="@+id/text_view_car_client_name"/>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="12dp"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/linear_layout_booking_info_bottom"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/linear_layout_booking_info_top">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:text="Date when:"
+                        style="@style/MainFont"
+                        android:id="@+id/text_view_car_date_when_title"/>
+
+                    <TextView
+                        android:text="Date booked:"
+                        style="@style/MainFont"
+                        android:layout_marginTop="5dp"
+                        android:layout_below="@id/text_view_car_date_when_title"
+                        android:id="@+id/text_view_car_date_booked_title" />
+
+                    <TextView
+                        android:text="Time when:"
+                        style="@style/MainFont"
+                        android:layout_marginTop="5dp"
+                        android:layout_below="@id/text_view_car_date_booked_title"
+                        android:id="@+id/text_view_car_time_when_title" />
+
+                    <TextView
+                        style="@style/MainFont"
+                        android:id="@+id/text_view_car_time_booked_title"
+                        android:text="Time booked:"
+                        android:layout_marginTop="5dp"
+                        android:layout_below="@id/text_view_car_time_when_title" />
+
+                    <TextView
+                        android:text="Price:"
+                        style="@style/MainFont"
+                        android:layout_marginTop="5dp"
+                        android:layout_below="@id/text_view_car_time_booked_title"
+                        android:id="@+id/text_view_car_price_title"/>
+
+                    <TextView
+                        style="@style/MainFont"
+                        android:layout_marginTop="5dp"
+                        android:text="Type:"
+                        android:layout_below="@id/text_view_car_price_title"
+                        android:id="@+id/text_view_car_type_title"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp">
+
+                    <TextView
+                        style="@style/MainFont"
+                        android:text="Date when"
+                        android:id="@+id/text_view_car_date_when"/>
+
+                    <TextView
+                        style="@style/MainFont"
+                        android:id="@+id/text_view_car_date_booked"
+                        android:text="Date booked"
+                        android:layout_marginTop="5dp"
+                        android:layout_below="@id/text_view_car_date_when" />
+
+                    <TextView
+                        style="@style/MainFont"
+                        android:id="@+id/text_view_car_time_when"
+                        android:text="Time when"
+                        android:layout_marginTop="5dp"
+                        android:layout_below="@id/text_view_car_date_booked" />
+
+                    <TextView
+                        style="@style/MainFont"
+                        android:id="@+id/text_view_car_time_booked"
+                        android:text="Time booked"
+                        android:layout_marginTop="5dp"
+                        android:layout_below="@id/text_view_car_time_when" />
+
+                    <TextView
+                        style="@style/MainFont"
+                        android:text="Price"
+                        android:layout_marginTop="5dp"
+                        android:layout_below="@id/text_view_car_time_booked"
+                        android:id="@+id/text_view_car_price"/>
+
+                    <TextView
+                        android:text="Type"
+                        style="@style/MainFont"
+                        android:layout_marginTop="5dp"
+                        android:layout_below="@id/text_view_car_price"
+                        android:id="@+id/text_view_car_type"/>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_marginTop="20dp"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/relativeLayoutButtons"
+                android:layout_below="@id/linear_layout_booking_info_bottom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <Button
+                    style="@style/ButtonRed"
+                    android:layout_width="120dp"
+                    android:text="Cancel"
+                    android:id="@+id/button_delete_booking" />
+
+                <Button
+                    android:layout_toRightOf="@id/button_delete_booking"
+                    style="@style/ButtonGreen"
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="120dp"
+                    android:text="Payment Details"
+                    android:id="@+id/button_pay_booking" />
+            </RelativeLayout>
+
+            <Button
+                style="@style/ButtonGreen"
+                android:text="Mark as paid"
+                android:layout_centerHorizontal="true"
+                android:layout_width="120dp"
+                android:layout_below="@id/relativeLayoutButtons"
+                android:id="@+id/button_mark_paid" />
+        </RelativeLayout>
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

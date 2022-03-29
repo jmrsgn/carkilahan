@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/parent"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="7dp"
+    android:layout_margin="5dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <!-- collapse -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:id="@+id/collapsed_relative_layout">
+
+            <ImageView
+                android:id="@+id/image_view_car_avatar"
+                android:layout_width="250dp"
+                android:layout_height="150dp"
+                android:layout_centerHorizontal="true"
+                android:src="@mipmap/ic_launcher" />
+
+            <TextView
+                style="@style/Font5"
+                android:text="Car Name"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:layout_below="@+id/image_view_car_avatar"
+                android:id="@+id/text_view_car_name" />
+
+            <ImageView
+                android:id="@+id/image_view_down_arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/text_view_car_name"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:src="@mipmap/ic_down_arrow"
+                tools:visibility="visible" />
+        </RelativeLayout>
+
+        <!-- extended -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/collapsed_relative_layout"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:visibility="visible"
+            android:id="@+id/expanded_relative_layout">
+
+            <LinearLayout
+                android:id="@+id/linear_layout_car_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        style="@style/Font7"
+                        android:text="Plater number:"
+                        android:id="@+id/text_view_car_plate_number_title"/>
+
+                    <TextView
+                        style="@style/Font7"
+                        android:text="Color:"
+                        android:layout_below="@id/text_view_car_plate_number_title"
+                        android:id="@+id/text_view_car_color_title"/>
+
+                    <TextView
+                        style="@style/Font7"
+                        android:text="Year:"
+                        android:layout_below="@id/text_view_car_color_title"
+                        android:id="@+id/text_view_car_year_title"/>
+
+                    <TextView
+                        style="@style/Font7"
+                        android:text="Transmission:"
+                        android:layout_below="@id/text_view_car_year_title"
+                        android:id="@+id/text_view_car_transmission_title"/>
+
+                    <TextView
+                        style="@style/Font7"
+                        android:text="Seater:"
+                        android:layout_below="@id/text_view_car_transmission_title"
+                        android:id="@+id/text_view_car_seater_title"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp">
+
+                    <TextView
+                        style="@style/Font6"
+                        android:text="Plate number"
+                        android:layout_marginLeft="10dp"
+                        android:id="@+id/text_view_car_plate_numer"/>
+
+                    <TextView
+                        style="@style/Font6"
+                        android:text="Color"
+                        android:layout_marginLeft="10dp"
+                        android:layout_below="@id/text_view_car_plate_numer"
+                        android:id="@+id/text_view_car_color"/>
+
+                    <TextView
+                        style="@style/Font6"
+                        android:text="Year"
+                        android:layout_marginLeft="10dp"
+                        android:layout_below="@id/text_view_car_color"
+                        android:id="@+id/text_view_car_year"/>
+
+                    <TextView
+                        style="@style/Font6"
+                        android:text="Transmission"
+                        android:layout_marginLeft="10dp"
+                        android:layout_below="@id/text_view_car_year"
+                        android:id="@+id/text_view_car_transmission"/>
+
+                    <TextView
+                        style="@style/Font6"
+                        android:text="Seater"
+                        android:layout_marginLeft="10dp"
+                        android:layout_below="@id/text_view_car_transmission"
+                        android:id="@+id/text_view_car_seater"/>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <RadioGroup
+                android:layout_below="@id/linear_layout_car_info"
+                android:layout_marginTop="10dp"
+                android:id="@+id/radio_group_car_prices"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/radio_button_car_price1"
+                    style="@style/SecondaryFont"
+                    android:text="price1"/>
+
+                <RadioButton
+                    android:id="@+id/radio_button_car_price2"
+                    style="@style/SecondaryFont"
+                    android:text="price2"/>
+
+                <RadioButton
+                    android:id="@+id/radio_button_car_price3"
+                    style="@style/SecondaryFont"
+                    android:text="price3"/>
+            </RadioGroup>
+
+            <Button
+                style="@style/ButtonGreen"
+                android:layout_marginTop="20dp"
+                android:text="Rent"
+                android:layout_below="@id/radio_group_car_prices"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/button_rent_car" />
+
+            <Button
+                style="@style/ButtonRed"
+                android:layout_marginTop="20dp"
+                android:text="Delete"
+                android:layout_below="@id/radio_group_car_prices"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/button_delete_car" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/ic_up_arrow"
+                android:layout_marginTop="90dp"
+                android:layout_marginBottom="20dp"
+                android:layout_below="@id/radio_group_car_prices"
+                android:layout_centerHorizontal="true"
+                tools:visibility="visible"
+                android:id="@+id/image_view_up_arrow"/>
+        </RelativeLayout>
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

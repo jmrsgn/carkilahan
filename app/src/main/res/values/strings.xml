@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">Carkilahan</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+
+
+    <string name="admin_dashboard">Admin Dashboard</string>
+    <string name="all_cars">All Cars</string>
+    <string name="all_users">All Users</string>
+    <string name="all_bookings">All Bookings</string>
+    <string name="my_bookings">My Bookings</string>
+    <string name="profile">Profile</string>
+
+    <string name="delete_car"><u>Delete</u></string>
+
+    <string-array name="car_transmission">
+        <item>Automatic</item>
+        <item>Manual</item>
+    </string-array>
+
+    <!--client dashboard-->
+    <string name="client_dashboard">Client Dashboard</string>
+    <string name="client_browse_cars">Browse Cars</string>
+    <string name="client_my_bookings">My Bookings</string>
+
+    <string name="msg_token_fmt">NEW TOKEN</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

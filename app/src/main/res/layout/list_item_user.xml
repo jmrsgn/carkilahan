@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/parent"
+    app:cardCornerRadius="7dp"
+    app:cardElevation="7dp"
+    android:layout_margin="5dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <!-- collapse -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:id="@+id/collapsed_relative_layout">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/image_view_avatar"
+                android:layout_centerHorizontal="true"
+                android:src="@mipmap/ic_user_avatar"
+                android:layout_marginLeft="20dp"
+                android:layout_width="150dp"
+                android:layout_height="150dp"/>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_marginBottom="30dp"
+                android:layout_marginTop="20dp"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/linear_layout_user_info"
+                android:layout_width="match_parent"
+                android:padding="24dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/image_view_avatar">
+
+                <RelativeLayout
+                    android:id="@+id/relative_layout_user_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        style="@style/MainFont"
+                        android:text="User ID:"
+                        android:id="@+id/text_view_user_id_title" />
+
+                    <TextView
+                        style="@style/MainFont"
+                        android:layout_marginLeft="12dp"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@id/text_view_user_id_title"
+                        android:text="ID"
+                        android:id="@+id/text_view_user_id"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <RelativeLayout
+                        android:id="@+id/relative_layout_user_info_titles"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_marginTop="5dp"
+                            android:text="User name:"
+                            style="@style/MainFont"
+                            android:id="@+id/text_view_user_name_title"/>
+
+                        <TextView
+                            android:text="Contact no:"
+                            style="@style/MainFont"
+                            android:layout_marginTop="5dp"
+                            android:layout_below="@id/text_view_user_name_title"
+                            android:id="@+id/text_view_user_contact_no_title" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_toRightOf="@id/relative_layout_user_info_titles"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp">
+
+                        <TextView
+                            style="@style/MainFont"
+                            android:text="Name"
+                            android:layout_marginTop="5dp"
+                            android:id="@+id/text_view_user_name"/>
+
+                        <TextView
+                            style="@style/MainFont"
+                            android:id="@+id/text_view_user_contact_no"
+                            android:text="Contact no."
+                            android:layout_marginTop="5dp"
+                            android:layout_below="@id/text_view_user_name" />
+                    </RelativeLayout>
+                </RelativeLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

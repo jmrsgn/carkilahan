@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/parent"
+    app:cardCornerRadius="6dp"
+    app:cardElevation="6dp"
+    android:layout_margin="5dp">
+
+    <RelativeLayout
+        android:layout_width="350dp"
+        android:layout_height="wrap_content" >
+
+        <!-- collapse -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="12dp"
+            android:id="@+id/collapsed_relative_layout">
+
+            <LinearLayout
+                android:layout_centerHorizontal="true"
+                android:id="@+id/linear_layout_transaction_info_top"
+                android:layout_width="300dp"
+                android:layout_marginTop="12dp"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:text="Client name:"
+                        android:textStyle="bold"
+                        style="@style/MainFont"
+                        android:id="@+id/text_view_transaction_client_name_title"/>
+
+                    <TextView
+                        android:text="Date when:"
+                        style="@style/MainFont"
+                        android:layout_marginTop="5dp"
+                        android:layout_below="@id/text_view_transaction_client_name_title"
+                        android:id="@+id/text_view_transaction_date_when_title"/>
+
+                    <TextView
+                        android:text="Date booked:"
+                        style="@style/MainFont"
+                        android:layout_marginTop="5dp"
+                        android:layout_below="@id/text_view_transaction_date_when_title"
+                        android:id="@+id/text_view_transaction_date_booked_title" />
+
+                    <TextView
+                        android:text="Time when:"
+                        style="@style/MainFont"
+                        android:layout_marginTop="5dp"
+                        android:layout_below="@id/text_view_transaction_date_booked_title"
+                        android:id="@+id/text_view_transaction_time_when_title" />
+
+                    <TextView
+                        style="@style/MainFont"
+                        android:id="@+id/text_view_transaction_time_booked_title"
+                        android:text="Time booked:"
+                        android:layout_marginTop="5dp"
+                        android:layout_below="@id/text_view_transaction_time_when_title" />
+
+                    <TextView
+                        style="@style/MainFont"
+                        android:layout_marginTop="5dp"
+                        android:text="Amount to pay:"
+                        android:layout_below="@id/text_view_transaction_time_booked_title"
+                        android:id="@+id/text_view_transaction_amount_to_pay_title"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp">
+
+                    <TextView
+                        style="@style/MainFont"
+                        android:text="Client name"
+                        android:textStyle="bold"
+                        android:id="@+id/text_view_transaction_client_name"/>
+
+                    <TextView
+                        style="@style/MainFont"
+                        android:text="Date when"
+                        android:layout_marginTop="5dp"
+                        android:layout_below="@id/text_view_transaction_client_name"
+                        android:id="@+id/text_view_transaction_date_when"/>
+
+                    <TextView
+                        style="@style/MainFont"
+                        android:id="@+id/text_view_transaction_date_booked"
+                        android:text="Date booked"
+                        android:layout_marginTop="5dp"
+                        android:layout_below="@id/text_view_transaction_date_when" />
+
+                    <TextView
+                        style="@style/MainFont"
+                        android:id="@+id/text_view_transaction_time_when"
+                        android:text="Time when"
+                        android:layout_marginTop="5dp"
+                        android:layout_below="@id/text_view_transaction_date_booked" />
+
+                    <TextView
+                        style="@style/MainFont"
+                        android:id="@+id/text_view_transaction_time_booked"
+                        android:text="Time booked"
+                        android:layout_marginTop="5dp"
+                        android:layout_below="@id/text_view_transaction_time_when" />
+
+                    <TextView
+                        android:text="Amount to pay"
+                        style="@style/MainFont"
+                        android:layout_marginTop="5dp"
+                        android:layout_below="@id/text_view_transaction_time_booked"
+                        android:id="@+id/text_view_transaction_amount_to_pay"/>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/linear_layout_transaction_info_bottom"
+                android:layout_marginTop="12dp"
+                android:layout_below="@id/linear_layout_transaction_info_top"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:id="@+id/relative_layout_transaction_booking_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        style="@style/MainFont"
+                        android:text="Booking ID:"
+                        android:id="@+id/text_view_transaction_booking_id_title"/>
+
+                    <TextView
+                        style="@style/MainFont"
+                        android:text="Car ID:"
+                        android:layout_below="@id/text_view_transaction_booking_id_title"
+                        android:id="@+id/text_view_transaction_car_id_title"/>
+
+                    <TextView
+                        style="@style/MainFont"
+                        android:text="User ID:"
+                        android:layout_below="@id/text_view_transaction_car_id_title"
+                        android:id="@+id/text_view_transaction_user_id_title"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/relative_layout_transaction_car_id"
+                    android:layout_marginLeft="12dp"
+                    android:layout_below="@id/relative_layout_transaction_booking_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:text="Booking ID"
+                        style="@style/MainFont"
+                        android:id="@+id/text_view_transaction_booking_id"/>
+
+                    <TextView
+                        android:text="Car ID"
+                        style="@style/MainFont"
+                        android:layout_below="@+id/text_view_transaction_booking_id"
+                        android:id="@+id/text_view_transaction_car_id"/>
+
+                    <TextView
+                        android:text="User ID"
+                        style="@style/MainFont"
+                        android:layout_below="@id/text_view_transaction_car_id"
+                        android:id="@+id/text_view_transaction_user_id"/>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_margin="20dp"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/relative_layout_buttons"
+                android:layout_below="@id/linear_layout_transaction_info_bottom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <Button
+                    style="@style/ButtonRed"
+                    android:layout_width="120dp"
+                    android:text="Delete"
+                    android:id="@+id/button_delete_transaction" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

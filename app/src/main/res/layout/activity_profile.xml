@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fillViewport="true">
+
+    <RelativeLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ProfileActivity">
+
+        <RelativeLayout
+            android:id="@+id/relative_layout_profile"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/relative_layout_image"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/image_view_avatar"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_centerHorizontal="true"
+                    android:scaleType="centerCrop"
+                    android:src="@mipmap/ic_user_avatar" />
+
+                <ImageView
+                    android:layout_marginLeft="20dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/image_view_avatar"
+                    android:layout_marginTop="5dp"
+                    android:id="@+id/image_view_change_image"
+                    android:layout_width="60dp"
+                    android:layout_height="50dp"
+                    android:background="@color/green_1"
+                    android:src="@mipmap/ic_camera" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relative_layout_uid"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_width="wrap_content"
+                android:layout_below="@id/relative_layout_image"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/text_view_uid_title"
+                    style="@style/MainFont"
+                    android:text="UID:"
+                    android:layout_centerVertical="true"/>
+
+                <TextView
+                    android:id="@+id/text_view_uid"
+                    android:layout_centerVertical="true"
+                    style="@style/MainFont"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@id/text_view_uid_title"
+                    android:text="UID"/>
+            </RelativeLayout>
+
+            <EditText
+                android:layout_marginTop="10dp"
+                style="@style/EditText1"
+                android:id="@+id/edit_text_name"
+                android:layout_below="@id/relative_layout_uid"
+                android:drawableStart="@drawable/ic_name"
+                android:text="Name"
+                android:hint="Enter your name"
+                android:enabled="false"/>
+
+            <EditText
+                style="@style/EditText1"
+                android:layout_marginTop="12dp"
+                android:drawableStart="@drawable/ic_email"
+                android:id="@+id/edit_text_email"
+                android:layout_below="@id/edit_text_name"
+                android:text="Email"
+                android:hint="Enter your email"
+                android:enabled="false"/>
+
+            <EditText
+                android:id="@+id/edit_text_contact_no"
+                android:layout_marginTop="12dp"
+                style="@style/EditText1"
+                android:inputType="number"
+                android:drawableStart="@drawable/ic_contact_no"
+                android:text="Contact no"
+                android:hint="Enter your contact no"
+                android:enabled="false"
+                android:layout_below="@id/edit_text_email"/>
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/button_update_profile"
+            style="@style/ButtonGreen"
+            android:text="Update"
+            android:layout_marginTop="20dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/relative_layout_profile"
+            app:layout_goneMarginTop="20dp" />
+
+        <Button
+            android:id="@+id/button_confirm_update"
+            style="@style/ButtonGreen"
+            android:text="Confirm update"
+            android:enabled="false"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/button_update_profile"/>
+
+        <Button
+            android:id="@+id/button_delete_account"
+            android:text="Delete account"
+            style="@style/ButtonRed"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/button_confirm_update"/>
+    </RelativeLayout>
+</ScrollView>
+
+
